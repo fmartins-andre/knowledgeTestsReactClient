@@ -13,11 +13,6 @@ const Layout:FC<{menus:Menu[]}> = ({ children, menus }) => {
         {children}
       </Box>
 
-      <Box sx={contents} component="footer">
-        footer
-        <br />
-        teste
-      </Box>
     </Box>
   )
 }
