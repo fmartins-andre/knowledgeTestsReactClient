@@ -33,6 +33,7 @@ const gridLayout: SxProps<Theme> = (theme) => ({
     margin: `${theme.spacing(1)} auto`,
     borderRadius: '0.8rem',
     boxShadow: `0 0 30px ${theme.palette.primary.main}`,
+    minHeight: `calc(100vh - ${theme.spacing(2)})`,
     overflow: 'hidden'
   }
 })
