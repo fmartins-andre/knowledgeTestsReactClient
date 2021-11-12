@@ -27,19 +27,17 @@ const contents: SxProps<Theme> = (theme) => ({
 })
 
 const gridLayout: SxProps<Theme> = (theme) => ({
-  position: 'relative',
   display: 'grid',
-  gridTemplateColumns: 'minmax(320px, 1fr)',
-  gridTemplateRows: '64px minmax(400px, 1fr) max-content',
   gap: 2,
+  gridTemplateColumns: `minmax(${theme.breakpoints.values.xs}, 1fr)`,
+  gridTemplateRows: '64px minmax(400px, 1fr) max-content',
   minHeight: '100vh',
   height: '100%',
   maxWidth: theme.breakpoints.values.xl,
-  margin: '0 auto',
-  boxShadow: '0 0 30px ' + theme.palette.primary.main,
   [theme.breakpoints.up('xl')]: {
-    margin: '10px auto',
+    margin: `${theme.spacing(1)} auto`,
     borderRadius: '0.8rem',
+    boxShadow: `0 0 30px ${theme.palette.primary.main}`,
     overflow: 'hidden'
   }
 })
